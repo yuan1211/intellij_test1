@@ -1,0 +1,26 @@
+//09시에 알람 울릴때 현재 시간 입력받고 알람이 울리기까지 남은시간이나 알람 울린 후 지난 시간 출력
+
+import java.util.Scanner;
+
+public class week2_challenge {
+    public static void main(String[] args) {
+
+        int a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("현재 시간을 입력하세요 : ");
+        a = sc.nextInt();
+        System.out.println("현재 분을 입력하세요 : ");
+        b = sc.nextInt();
+
+        if (a > 9){
+            a = (33 - a);
+        }
+        else{
+            a = 9 - a;
+        }
+
+        b = 60 - b;
+
+        System.out.println("알람이 울리기까지" + a + "시간" + b + "분 남았습니다. ");
+    }
+}
